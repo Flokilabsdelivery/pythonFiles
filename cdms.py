@@ -43,9 +43,11 @@ files_in_drive = list_all_files_in_drive(drive_to_list)
 
 file1 = []
 
+
+
 for file in files_in_drive:
     
-    list1 = file.split('//')
+    list1 = file.split('/')
     
     
     list1.pop()
