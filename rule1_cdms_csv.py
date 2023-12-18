@@ -30,11 +30,11 @@ import re
 
 import pandas as pd
 
-config = pd.read_excel('config.xlsx')
+config = pd.read_excel('config.xlsx',engine = 'openpyxl')
 
 config = dict(list(zip(config['key'],config['value'])))
 
-business = pd.read_excel(config['business_configuration'])
+business = pd.read_excel(config['business_configuration'],engine = 'openpyxl')
 
 business.dropna(subset = ['File Name'],inplace = True)
 
