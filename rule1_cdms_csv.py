@@ -511,7 +511,7 @@ for i in range(0,len(business)):
     
     final_df_duplicates.loc[final_df_duplicates['reason']!='','reason'] += 'duplicates in raw data'
     
-    final_df_duplicates.to_csv('invalid/duplicates_in_raw_data_'+business.loc[i,'File Name'],index = False)
+    # final_df_duplicates.to_csv('invalid/duplicates_in_raw_data_'+business.loc[i,'File Name'],index = False)
     
     
     
@@ -594,7 +594,7 @@ for i in range(0,len(business)):
 
     duplicates = pd.concat([hash1_duplicates,hash2_duplicates],axis = 0)
     
-    duplicates.to_csv('invalid//duplicates_'+business.loc[i,'File Name'],index  = False)
+    # duplicates.to_csv('invalid//duplicates_'+business.loc[i,'File Name'],index  = False)
 
     invalid_records = final_df[final_df['valid']=='invalid']
     
@@ -604,7 +604,18 @@ for i in range(0,len(business)):
     
     # duplicate_hash.to_csv('invalid//duplicates_'+business.loc[i,'File Name'],index  = False)
     
+    final_df_duplicates['reason'] = 'duplicates in input'
+    
+    duplicates['reason'] = 'duplicates identified from system'
+
+    invalid_records = pd.concat([invalid_records,final_df_duplicates],axis = 0)
+
+    invalid_records = pd.concat([invalid_records,duplicates],axis = 0)
+    
     invalid_records.to_csv('invalid//'+business.loc[i,'File Name'],index  = False)
+
+
+
 
     consolidated_status.loc[i,'valid count'] = len(final_df)
     
