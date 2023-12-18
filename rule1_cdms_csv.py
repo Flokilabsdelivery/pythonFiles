@@ -18,7 +18,7 @@ import requests
 
 import sys
 
-sys.path.append(r'D:\Python_exe\Lib\site-packages')
+# sys.path.append(r'D:/Python_exe/Lib\site-packages')
 
 warnings.filterwarnings("ignore")
 
@@ -97,7 +97,7 @@ def hash(row,column,hash_value):
 
 def special_character_check_firstname(row):
 
-    special_char=re.compile("\/;,=?\[]\{}\(\)_`+&*'~#􀀀")
+    special_char=re.compile("//;,=?\[]\{}\(\)_`+&*'~#􀀀")
 
     if special_char.search(row['CustomerFirstName']) != None:
         
@@ -313,7 +313,7 @@ for i in range(0,len(business)):
     
     # print(business.loc[i,'File Name'])
     
-    df = pd.read_csv(config['File_path']+"\\"+business.loc[i,'File Name'],sep="|")
+    df = pd.read_csv(config['File_path']+"/"+business.loc[i,'File Name'],sep="|")
     
     consolidated_status.loc[i,'input_count'] = len(df)
 
