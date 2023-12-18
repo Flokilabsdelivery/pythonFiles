@@ -1,0 +1,34 @@
+key,value
+CustomerNumber,CustomerIDNo
+CustomerFirstName,FirstName
+CustomerMiddleName,MiddleName
+CustomerLastName,LastName
+CustomerType,CustomerType
+Gender,Sex
+CustomerBirthDate,BirthDate
+BirthPlace,BirthPlace
+MotherName,Mother'sMaidenName
+CivilStatus,MaritalStatus
+Nationality,Nationality
+IsMinor,IsMinor
+IsPEP,isPep
+SourceOfFund,SourceofFunds
+MonthlyIncome,AverageMonthlyIncome
+Occupation,Occupation
+CreatedDate,CreatedDate
+IndustryType,NatureofWork
+Positions,"EmployedPrivatePosition,GovernmentPosition,"
+NameOfEmployer,EmployedPrivateNameof Employer
+RESPHONE,LandlineNo
+MOBPHONE,MobileNumber
+EMAIL,EmailAddress
+BranchCode,BranchCode
+CompanyAddress,"EmployedPrivateOfficeAddress, SelfEmployedBusinessAddre ss, GovernmentOfficeAddres s,AddressofSchool"
+IssueDate,IDIssuedOn
+ExpiryDate,IDExpiryDate
+CustomerAddress1,PresentCountry
+CustomerAddress2,PresentProvince
+CustomerAddress3,PresentCity/Municipality
+CustomerAddress4,PresentUnit- Flr/Bldg/House No. and Street Name
+CardNo,SukiCardNo
+IssuingBranch,RegisteredAt
