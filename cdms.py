@@ -60,7 +60,7 @@ for file in files_in_drive:
 file1 = set(file1)
 
 
-
+file1 = file1[0:1]
 
 for i in file1:
     
@@ -163,42 +163,44 @@ for i in file1:
         
         CDMS_output.to_csv(i.replace(config['replace_string'],config['replace_with'])+"//CDMS_output.csv",index = False)
         
-        # body = {
+        body = {
     
-        #     "fileName":"CDMS_output.csv",
+            "fileName":"CDMS_output.csv",
     
-        #     "filePath":i.replace(config['replace_string'],config['replace_with']),
+            "filePath":i.replace(config['replace_string'],config['replace_with']),
     
-        #     "subListID":141,
+            "subListID":141,
     
-        #     "userID":"155",
+            "userID":"155",
     
-        #     "businessHierarchyId":"29"
+            "businessHierarchyId":"29"
     
-        # }
+        }
         
         
-        # response = requests.post(url = 'MR402S0349D.palawangroup.com:8085/fileUploadExternalApi',headers = {'X-AUTH-TOKEN':'eyJ1c2VybmFtZSI6InN5c3RlbSIsInRva2VuIjoiODRjOWZmNmQtZTllMy00MWUwLWI0MDctZmY5ZGQ5YjFmYWU4In0=','Content-Type':'application/json'},json = body)
+        response = requests.post(url = 'MR402S0349D.palawangroup.com:8085/fileUploadExternalApi',headers = {'X-AUTH-TOKEN':'eyJ1c2VybmFtZSI6InN5c3RlbSIsInRva2VuIjoiODRjOWZmNmQtZTllMy00MWUwLWI0MDctZmY5ZGQ5YjFmYWU4In0=','Content-Type':'application/json'},json = body)
         
-        # upload_id = response.json()['content']['uploadId']
+        print(response.status_code)
         
-        # try:
+        upload_id = response.json()['content']['uploadId']
+        
+        try:
 
-        #     producer = KafkaProducer(bootstrap_servers='MR402S0352D.palawangroup:9092')
+            producer = KafkaProducer(bootstrap_servers='MR402S0352D.palawangroup:9092')
 
-        #     topic = 'ftpKafkaConsumer'
+            topic = 'ftpKafkaConsumer'
          
-        #     my_dict = {'fileUploadId': upload_id, 'filePath': i.replace(config['replace_string'],config['replace_with']), 'fileName': 'CDMS_value.csv'}
+            my_dict = {'fileUploadId': upload_id, 'filePath': i.replace(config['replace_string'],config['replace_with']), 'fileName': 'CDMS_value.csv'}
 
-        #     my_dict = json.dumps(my_dict)
+            my_dict = json.dumps(my_dict)
 
-        #     producer.send(topic, value=my_dict.encode('utf-8'))
+            producer.send(topic, value=my_dict.encode('utf-8'))
 
-        #     print("Message sent successfully")
+            print("Message sent successfully")
          
-        # except Exception as e:
+        except Exception as e:
 
-        #     print(f"Error: {e}")
+            print(f"Error: {e}")
         
         
         
