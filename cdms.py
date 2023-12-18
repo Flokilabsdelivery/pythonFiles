@@ -153,6 +153,14 @@ for i in file1:
         
         print(i.replace(config['replace_string'],config['replace_with'])+"//CDMS_output.csv")
         
+        if os.path.exists(i.replace(config['replace_string'],config['replace_with'])):
+            
+            pass
+        
+        else:
+            
+            os.makedirs(i.replace(config['replace_string'],config['replace_with']))
+        
         CDMS_output.to_csv(i.replace(config['replace_string'],config['replace_with'])+"//CDMS_output.csv",index = False)
         
         # body = {
