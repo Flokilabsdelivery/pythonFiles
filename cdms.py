@@ -133,21 +133,21 @@ for i in file1:
         
             destinationdf[columnName] = hashColumn
         
-        CDMS_merged_hash1 = pd.DataFrame()
+        CDMS_merged_HASH_1 = pd.DataFrame()
         
-        CDMS_merged_hash2 = pd.DataFrame()
+        CDMS_merged_HASH_2 = pd.DataFrame()
         
-        hash(CDMS_merged,CDMS_merged_hash1,config['hash1_columns'].split(','))
+        hash(CDMS_merged,CDMS_merged_HASH_1,config['HASH_1_columns'].split(','))
         
-        CDMS_output = pd.concat([CDMS_merged,CDMS_merged_hash1],axis = 1)
+        CDMS_output = pd.concat([CDMS_merged,CDMS_merged_HASH_1],axis = 1)
         
-        CDMS_output.rename(columns = {'hash_'+''.join(config['hash1_columns'].split(',')):'hash1'},inplace = True)
+        CDMS_output.rename(columns = {'hash_'+''.join(config['HASH_1_columns'].split(',')):'HASH_1'},inplace = True)
         
-        hash(CDMS_merged,CDMS_merged_hash2,config['hash2_columns'].split(','))
+        hash(CDMS_merged,CDMS_merged_HASH_2,config['HASH_2_columns'].split(','))
         
-        CDMS_output = pd.concat([CDMS_output,CDMS_merged_hash2],axis = 1)
+        CDMS_output = pd.concat([CDMS_output,CDMS_merged_HASH_2],axis = 1)
         
-        CDMS_output.rename(columns = {'hash_'+''.join(config['hash2_columns'].split(',')):'hash2'},inplace = True)
+        CDMS_output.rename(columns = {'hash_'+''.join(config['HASH_2_columns'].split(',')):'HASH_2'},inplace = True)
         
         # CDMS_output = CDMS_output[config['output_columns'].split(',')]
         
