@@ -169,16 +169,16 @@ for i in file1:
     
             "filePath":i.replace(config['replace_string'],config['replace_with']),
     
-            "subListID":141,
+            "subListID":85,
     
-            "userID":"155",
+            "userID":149,
     
-            "businessHierarchyId":"29"
+            "businessHierarchyId":23
     
         }
         
         
-        response = requests.post(url = 'MR402S0349D.palawangroup.com:8085/fileUploadExternalApi',headers = {'X-AUTH-TOKEN':'eyJ1c2VybmFtZSI6InN5c3RlbSIsInRva2VuIjoiODRjOWZmNmQtZTllMy00MWUwLWI0MDctZmY5ZGQ5YjFmYWU4In0=','Content-Type':'application/json'},json = body)
+        response = requests.post(url = 'http://mr403s0332d.palawangroup.com:4200/fileUploadExternalApi',headers = {'X-AUTH-TOKEN':'eyJ1c2VybmFtZSI6InN5c3RlbSIsInRva2VuIjoiODRjOWZmNmQtZTllMy00MWUwLWI0MDctZmY5ZGQ5YjFmYWU4In0=','Content-Type':'application/json'},json = body)
         
         print(response.status_code)
         
