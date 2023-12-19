@@ -187,7 +187,7 @@ for i in file1:
 
         try:
 
-            producer = KafkaProducer(bootstrap_servers='MR402S0352D.palawangroup:9092')
+            producer = KafkaProducer(bootstrap_servers='MR402S0352D.palawangroup.com:9092')
 
             topic = 'ftpKafkaConsumer'
          
