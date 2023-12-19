@@ -99,6 +99,8 @@ for i in file1:
         
         CDMS_merged = pd.merge(CDMS_merged,file4,how = 'left',on = [config['customer_id']])
         
+        print('missed columns:',set(CDMS_merged) - set(headers.values))
+        
         #Columns rename
         
         # renaming_columns = dict(list(zip(config['columns_present'].split(','),config['columns_to_be_changed'].split(','))))
@@ -171,7 +173,7 @@ for i in file1:
     
             "filePath":i.replace(config['replace_string'],config['replace_with'])+'/',
     
-            "subListID":85,
+            "subListID":76,
     
             "userID":149,
     
