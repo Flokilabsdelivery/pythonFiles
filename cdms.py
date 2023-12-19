@@ -183,14 +183,16 @@ for i in file1:
         print(response.status_code)
         
         upload_id = response.json()['content']['uploadId']
-        
+
+
         try:
 
             producer = KafkaProducer(bootstrap_servers='MR402S0352D.palawangroup:9092')
 
             topic = 'ftpKafkaConsumer'
          
-            my_dict = {'fileUploadId': upload_id, 'filePath': i.replace(config['replace_string'],config['replace_with']), 'fileName': 'CDMS_value.csv'}
+#            my_dict = {'fileUploadId': upload_id, 'filePath': i.replace(config['replace_string'],config['replace_with']), 'fileName': 'CDMS_value.csv'}
+            my_dict = {'fileUploadId': 314, 'filePath': '/STFS0029M/1491702726149369/', 'fileName': 'sampleDoc (98).csv'}
 
             my_dict = json.dumps(my_dict)
 
@@ -202,6 +204,7 @@ for i in file1:
 
             print(f"Error: {e}")
         
+                
         
         
         
