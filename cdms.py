@@ -163,6 +163,8 @@ for i in file1:
         
         CDMS_output.to_csv(i.replace(config['replace_string'],config['replace_with'])+"//CDMS_output.csv",index = False)
         
+        print(CDMS_output.columns)
+        
         body = {
     
             "fileName":"CDMS_output.csv",
