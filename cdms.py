@@ -57,7 +57,7 @@ for file in files_in_drive:
                        
     file1.append(list1)
 
-file1 = set(file1)
+file1 = list(set(file1))
 
 
 file1 = file1[0:1]
