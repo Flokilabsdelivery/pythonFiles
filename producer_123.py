@@ -14,7 +14,7 @@ headers = pd.DataFrame(columns = ['file','headers'])
 for i in range(0,len(files)):
 
 	
-	df = pd.read_csv(path+"/"+i,sep="|")
+	df = pd.read_csv(path+"/"+files[i],sep="|")
 	
 	headers.loc[i,'file'] = files[i]
 
