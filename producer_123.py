@@ -18,7 +18,7 @@ for i in range(0,len(files)):
 	
 	headers.loc[i,'file'] = files[i]
 
-	headers.loc[i,'headers'] = files[i]
+	headers.loc[i,'headers'] = df.columns
 	
 headers.to_csv('headers.csv',index = False)
 
