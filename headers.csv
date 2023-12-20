@@ -1,28 +1,248 @@
 file,headers
-CORPORATE_TXN.csv,CORPORATE_TXN.csv
-CORPORATE_TXN_BENE.csv,CORPORATE_TXN_BENE.csv
-CORPORATE_TXN_SENDER.csv,CORPORATE_TXN_SENDER.csv
-DEDUP_ACCIDENT_INSURANCE.csv,DEDUP_ACCIDENT_INSURANCE.csv
-DEDUP_DOMESTIC_INWARD.csv,DEDUP_DOMESTIC_INWARD.csv
-DEDUP_DOMESTIC_OUTWARD.csv,DEDUP_DOMESTIC_OUTWARD.csv
-DEDUP_E-LOADING.csv,DEDUP_E-LOADING.csv
-DEDUP_INTERNATIONAL_INWARD.csv,DEDUP_INTERNATIONAL_INWARD.csv
-DOMESTIC_INWARD_TXN_BENE.csv,DOMESTIC_INWARD_TXN_BENE.csv
-DOMESTIC_INWARD_TXN_SENDER.csv,DOMESTIC_INWARD_TXN_SENDER.csv
-DOMESTIC_OUTWARD_TXN_BENE.csv,DOMESTIC_OUTWARD_TXN_BENE.csv
-DOMESTIC_OUTWARD_TXN_SENDER.csv,DOMESTIC_OUTWARD_TXN_SENDER.csv
-DOMESTIC_TXN.csv,DOMESTIC_TXN.csv
-INTERNATIONAL_INWARD_TXN_BENE.csv,INTERNATIONAL_INWARD_TXN_BENE.csv
-INTERNATIONAL_INWARD_TXN_SENDER.csv,INTERNATIONAL_INWARD_TXN_SENDER.csv
-INTERNATIONAL_OUTWARD_TXN_BENE.csv,INTERNATIONAL_OUTWARD_TXN_BENE.csv
-INTERNATIONAL_OUTWARD_TXN_SENDER.csv,INTERNATIONAL_OUTWARD_TXN_SENDER.csv
-INTERNATIONAL_TXN.csv,INTERNATIONAL_TXN.csv
-PAWNING_LOAN_DETAILS.csv,PAWNING_LOAN_DETAILS.csv
-PAWNING_LOAN_DETAILS_UCMS.csv,PAWNING_LOAN_DETAILS_UCMS.csv
-PAWNING_TRANSACTION.csv,PAWNING_TRANSACTION.csv
-PAWNING_TRANSACTION_UCMS.csv,PAWNING_TRANSACTION_UCMS.csv
-RISKWATCH.csv,RISKWATCH.csv
-TO_BANK_OUTWARD_TXN_BENE.csv,TO_BANK_OUTWARD_TXN_BENE.csv
-TO_BANK_OUTWARD_TXN_SENDER.csv,TO_BANK_OUTWARD_TXN_SENDER.csv
-TO_BANK_TXN.csv,TO_BANK_TXN.csv
-MC_BOUGHT_FROM_CUSTOMER.csv,MC_BOUGHT_FROM_CUSTOMER.csv
+CORPORATE_TXN.csv,"Index(['TransactionDate', 'CustomerNumber', 'SukiCardNumber',
+       'TransactionReferenceNumber', 'TransactionAmount', 'CalcMode',
+       'TransactionFxAmount', 'Currency', 'NameOfCorrespondentBank',
+       'CorrespondentBankAddress1', 'CorrespondentBankAddress2',
+       'CorrespondentBankAddress3', 'CorrespondentBankCountryCode',
+       'PurposeOfTransaction', 'DebitCredit', 'SourceTransactionCode',
+       'SourceSubTransactionCode', 'FromBranchCode', 'ToBranchCode', 'User',
+       'Status'],
+      dtype='object')"
+CORPORATE_TXN_BENE.csv,"Index(['BeneficiaryCustomerReferenceNumber', 'BeneficiaryCustomerType',
+       'BeneficiaryLastName', 'BeneficiaryFirstName', 'BeneficiaryMiddleName',
+       'BeneficiaryAddress1', 'BeneficiaryAddress2', 'BeneficiaryAddress3',
+       'BeneficiaryBirthDate', 'BeneficiaryCorporateName',
+       'BeneficiaryRegistrationDate', 'BeneficiaryPlaceOfBirth',
+       'BeneficiaryTelephoneNumber', 'TransactionReferenceNumber',
+       'CustomerNO', 'AccountNumber', 'POB', 'DOB'],
+      dtype='object')"
+CORPORATE_TXN_SENDER.csv,"Index(['CounterPartyCustomerReferenceNumber', 'CounterPartyCustomerType',
+       'CounterPartyLastName', 'CounterPartyFirstName',
+       'CounterPartyMiddleName', 'CounterPartyAddress1',
+       'CounterPartyAddress2', 'CounterPartyAddress3',
+       'CounterPartyCorporateName', 'TransactionReferenceNumber', 'POB', 'DOB',
+       'SenderIdentificationNumber', 'SenderIdentificationType', 'CustomerNO',
+       'Nationality'],
+      dtype='object')"
+DEDUP_ACCIDENT_INSURANCE.csv,"Index(['TranxDateTime', 'SenderID', 'ReceiverID', 'TranxID', 'Principal',
+       'CalcMode', 'Remarks', 'TranxStatus', 'FromBranchCode', 'ToBranchCode',
+       'UserID', 'SenderLN', 'SenderFN', 'SenderMN', 'SenderAddress1',
+       'SenderAddress2', 'SenderAddress3', 'Unnamed: 17', 'ReceiverLN',
+       'ReceiverFN', 'ReceiverMN', 'ReceiverAddress1', 'ReceiverAddress2',
+       'ReceiverAddress3', 'ClaimantIDs', 'ReceiverMPN', 'Unnamed: 26',
+       'Unnamed: 27', 'OrigDest', 'OwnerBranch', 'SenderMI', 'SenderGender',
+       'SenderMPN', 'ReceiverMI', 'ReceiverGender', 'ServiceCharge',
+       'Commission', 'Discount', 'BracketID', 'CommissionRate', 'SCRate',
+       'TotalAmount', 'SendStatus', 'DateTimeSent', 'TransMedium', 'EmpNo',
+       'EmpInitials', 'ModDateTime', 'ModUserID', 'ModEmpNo', 'ModEmpInitials',
+       'Flags', 'PendingChangeID'],
+      dtype='object')"
+DEDUP_DOMESTIC_INWARD.csv,"Index(['TransactionDate', 'CustomerNumber', 'SukiCardNumber',
+       'TransactionReferenceNumber', 'TransactionAmount', 'CalcMode',
+       'PurposeOfTransaction', 'TranxStatus', 'FromBranchCode', 'ToBranchCode',
+       'User', 'SenderLastName', 'SenderFirstName', 'SenderMiddleName',
+       'SenderAddress1', 'SenderAddress2', 'SenderAddress3',
+       'SenderCustomerNumber', 'ReceiverLastName', 'ReceiverFirstName',
+       'ReceiverMiddleName', 'ReceiverAddress1', 'ReceiverAddress2',
+       'ReceiverAddress3', 'ReceiverIdentificationNumber',
+       'ReceiverTelephoneNumber', 'ReceiverCustomerNO', 'IdentificationType',
+       'OrigDest', 'OwnerBranch', 'SenderMI', 'SenderGender', 'SenderMPN',
+       'ReceiverMI', 'ReceiverGender', 'ServiceCharge', 'Commission',
+       'Discount', 'BracketID', 'CommissionRate', 'SCRate', 'TotalAmount',
+       'SendStatus', 'DateTimeSent', 'TransMedium', 'EmpNo', 'EmpInitials',
+       'ModDateTime', 'ModUserID', 'ModEmpNo', 'ModEmpInitials', 'Flags',
+       'PendingChangeID'],
+      dtype='object')"
+DEDUP_DOMESTIC_OUTWARD.csv,"Index(['TransactionDate', 'CustomerNumber', 'SukiCardNumber',
+       'TransactionReferenceNumber', 'TransactionAmount', 'CalcMode',
+       'PurposeOfTransaction', 'TranxStatus', 'FromBranchCode', 'ToBranchCode',
+       'User', 'SenderLastName', 'SenderFirstName', 'SenderMiddleName',
+       'SenderAddress1', 'SenderAddress2', 'SenderAddress3',
+       'SenderCustomerNumber', 'ReceiverLastName', 'ReceiverFirstName',
+       'ReceiverMiddleName', 'ReceiverAddress1', 'ReceiverAddress2',
+       'ReceiverAddress3', 'ReceiverIdentificationNumber',
+       'ReceiverTelephoneNumber', 'ReceiverCustomerNO', 'IdentificationType',
+       'OrigDest', 'OwnerBranch', 'SenderMI', 'SenderGender', 'SenderMPN',
+       'ReceiverMI', 'ReceiverGender', 'ServiceCharge', 'Commission',
+       'Discount', 'BracketID', 'CommissionRate', 'SCRate', 'TotalAmount',
+       'SendStatus', 'DateTimeSent', 'TransMedium', 'EmpNo', 'EmpInitials',
+       'ModDateTime', 'ModUserID', 'ModEmpNo', 'ModEmpInitials', 'Flags',
+       'PendingChangeID'],
+      dtype='object')"
+DEDUP_E-LOADING.csv,"Index(['TranxDateTime', 'SenderID', 'ReceiverID', 'TranxID', 'Principal',
+       'CalcMode', 'Remarks', 'TranxStatus', 'FromBranchCode', 'ToBranchCode',
+       'UserID', 'SenderLN', 'SenderFN', 'SenderMN', 'SenderAddress1',
+       'SenderAddress2', 'SenderAddress3', 'Unnamed: 17', 'ReceiverLN',
+       'ReceiverFN', 'ReceiverMN', 'ReceiverAddress1', 'ReceiverAddress2',
+       'ReceiverAddress3', 'ClaimantIDs', 'ReceiverMPN', 'Unnamed: 26',
+       'Unnamed: 27', 'OrigDest', 'OwnerBranch', 'SenderMI', 'SenderGender',
+       'SenderMPN', 'ReceiverMI', 'ReceiverGender', 'ServiceCharge',
+       'Commission', 'Discount', 'BracketID', 'CommissionRate', 'SCRate',
+       'TotalAmount', 'SendStatus', 'DateTimeSent', 'TransMedium', 'EmpNo',
+       'EmpInitials', 'ModDateTime', 'ModUserID', 'ModEmpNo', 'ModEmpInitials',
+       'Flags', 'PendingChangeID'],
+      dtype='object')"
+DEDUP_INTERNATIONAL_INWARD.csv,"Index(['TransactionDate', 'CustomerNumber', 'SukiCardNumber',
+       'TransactionReferenceNumber', 'TransactionAmount', 'CalcMode',
+       'PurposeOfTransaction', 'TranxStatus', 'FromBranchCode', 'ToBranchCode',
+       'User', 'SenderLastName', 'SenderFirstName', 'SenderMiddleName',
+       'SenderAddress1', 'SenderAddress2', 'SenderAddress3',
+       'SenderCustomerNumber', 'ReceiverLastName', 'ReceiverFirstName',
+       'ReceiverMiddleName', 'ReceiverAddress1', 'ReceiverAddress2',
+       'ReceiverAddress3', 'ReceiverIdentificationNumber',
+       'ReceiverTelephoneNumber', 'ReceiverCustomerNO', 'IdentificationType',
+       'OrigDest', 'OwnerBranch', 'SenderMI', 'SenderGender', 'SenderMPN',
+       'ReceiverMI', 'ReceiverGender', 'ServiceCharge', 'Commission',
+       'Discount', 'BracketID', 'CommissionRate', 'SCRate', 'TotalAmount',
+       'SendStatus', 'DateTimeSent', 'TransMedium', 'EmpNo', 'EmpInitials',
+       'ModDateTime', 'ModUserID', 'ModEmpNo', 'ModEmpInitials', 'Flags',
+       'PendingChangeID'],
+      dtype='object')"
+DOMESTIC_INWARD_TXN_BENE.csv,"Index(['BeneficiaryCustomerReferenceNumber', 'BeneficiaryCustomerType',
+       'BeneficiaryLastName', 'BeneficiaryFirstName', 'BeneficiaryMiddleName',
+       'BeneficiaryAddress1', 'BeneficiaryAddress2', 'BeneficiaryAddress3',
+       'BeneficiaryBirthDate', 'BeneficiaryCorporateName',
+       'BeneficiaryRegistrationDate', 'BeneficiaryPlaceOfBirth',
+       'BeneficiaryIdentificationNumber', 'BeneficiaryTelephoneNumber',
+       'TransactionReferenceNumber', 'CustomerNO', 'Identification type',
+       'BranchCode', 'POB', 'DOB', 'Transactiondate '],
+      dtype='object')"
+DOMESTIC_INWARD_TXN_SENDER.csv,"Index(['CounterPartyCustomerReferenceNumber', 'CounterPartyCustomerType',
+       'CounterPartyLastName', 'CounterPartyFirstName',
+       'CounterPartyMiddleName', 'CounterPartyAddress1',
+       'CounterPartyAddress2', 'CounterPartyAddress3',
+       'CounterPartyCorporateName', 'TransactionReferenceNumber',
+       'CustomerNumber', 'BranchCode', 'POB', 'DOB', 'Transactiondate '],
+      dtype='object')"
+DOMESTIC_OUTWARD_TXN_BENE.csv,"Index(['BeneficiaryCustomerReferenceNumber', 'BeneficiaryCustomerType',
+       'BeneficiaryLastName', 'BeneficiaryFirstName', 'BeneficiaryMiddleName',
+       'BeneficiaryAddress1', 'BeneficiaryAddress2', 'BeneficiaryAddress3',
+       'BeneficiaryBirthDate', 'BeneficiaryCorporateName',
+       'BeneficiaryRegistrationDate', 'BeneficiaryPlaceOfBirth',
+       'BeneficiaryIdentificationNumber', 'BeneficiaryTelephoneNumber',
+       'TransactionReferenceNumber', 'CustomerNO', 'Identification type',
+       'BranchCode', 'POB', 'DOB', 'Transactiondate '],
+      dtype='object')"
+DOMESTIC_OUTWARD_TXN_SENDER.csv,"Index(['CounterPartyCustomerReferenceNumber', 'CounterPartyCustomerType',
+       'CounterPartyLastName', 'CounterPartyFirstName',
+       'CounterPartyMiddleName', 'CounterPartyAddress1',
+       'CounterPartyAddress2', 'CounterPartyAddress3',
+       'CounterPartyCorporateName', 'TransactionReferenceNumber',
+       'CustomerNumber', 'BranchCode', 'POB', 'DOB', 'Transactiondate '],
+      dtype='object')"
+DOMESTIC_TXN.csv,"Index(['TransactionDate', 'CustomerNumber', 'SukiCardNumber',
+       'TransactionReferenceNumber', 'TransactionAmount', 'CalcMode',
+       'TransactionFxAmount', 'Currency', 'PurposeOfTransaction',
+       'DebitCredit', 'SourceTransactionCode', 'SourceSubTransactionCode',
+       'FromBranchCode', 'ToBranchCode', 'User'],
+      dtype='object')"
+INTERNATIONAL_INWARD_TXN_BENE.csv,"Index(['BeneficiaryCustomerReferenceNumber', 'BeneficiaryCustomerType',
+       'BeneficiaryLastName', 'BeneficiaryFirstName', 'BeneficiaryMiddleName',
+       'BeneficiaryAddress1', 'BeneficiaryAddress2', 'BeneficiaryAddress3',
+       'BeneficiaryBirthDate', 'BeneficiaryCorporateName',
+       'BeneficiaryRegistrationDate', 'BeneficiaryPlaceOfBirth',
+       'BeneficiaryIdentificationNumber', 'BeneficiaryTelephoneNumber',
+       'TransactionReferenceNumber', 'CustomerNO', 'Identification type',
+       'Transactiondate '],
+      dtype='object')"
+INTERNATIONAL_INWARD_TXN_SENDER.csv,"Index(['CounterPartyCustomerReferenceNumber', 'CounterPartyCustomerType',
+       'CounterPartyLastName', 'CounterPartyFirstName',
+       'CounterPartyMiddleName', 'CounterPartyAddress1',
+       'CounterPartyAddress2', 'CounterPartyAddress3',
+       'CounterPartyCorporateName', 'TransactionReferenceNumber',
+       'CustomerNumber', 'Transactiondate '],
+      dtype='object')"
+INTERNATIONAL_OUTWARD_TXN_BENE.csv,"Index(['BeneficiaryCustomerReferenceNumber', 'BeneficiaryCustomerType',
+       'BeneficiaryLastName', 'BeneficiaryFirstName', 'BeneficiaryMiddleName',
+       'BeneficiaryAddress1', 'BeneficiaryAddress2', 'BeneficiaryAddress3',
+       'BeneficiaryBirthDate', 'BeneficiaryCorporateName',
+       'BeneficiaryRegistrationDate', 'BeneficiaryPlaceOfBirth',
+       'BeneficiaryIdentificationNumber', 'BeneficiaryTelephoneNumber',
+       'TransactionReferenceNumber', 'CustomerNO', 'Identification type',
+       'Transactiondate '],
+      dtype='object')"
+INTERNATIONAL_OUTWARD_TXN_SENDER.csv,"Index(['CounterPartyCustomerReferenceNumber', 'CounterPartyCustomerType',
+       'CounterPartyLastName', 'CounterPartyFirstName',
+       'CounterPartyMiddleName', 'CounterPartyAddress1',
+       'CounterPartyAddress2', 'CounterPartyAddress3',
+       'CounterPartyCorporateName', 'TransactionReferenceNumber',
+       'CustomerNumber', 'Transactiondate '],
+      dtype='object')"
+INTERNATIONAL_TXN.csv,"Index(['TransactionDate', 'CustomerNumber', 'SukiCardNumber',
+       'TransactionReferenceNumber', 'TransactionAmount',
+       'TransactionFxAmount', 'Currency', 'NameOfCorrespondentBank',
+       'CorrespondentBankAddress1', 'CorrespondentBankAddress2',
+       'CorrespondentBankAddress3', 'CorrespondentBankCountryCode',
+       'PurposeOfTransaction', 'DebitCredit', 'SourceTransactionCode',
+       'SourceSubTransactionCode', 'BranchCode', 'User'],
+      dtype='object')"
+PAWNING_LOAN_DETAILS.csv,"Index(['OldPNNumber', 'PNNumber', 'LoanType', 'LoanProductType',
+       'EffectivityDate', 'Status', 'MaturityDate', 'ActualClosedDate',
+       'LoanAmount', 'PawnedItem', 'PawnedItemType', 'AppraisalRate',
+       'RedemptionDate', 'UpdatedDate', 'CustomerNumber'],
+      dtype='object')"
+PAWNING_LOAN_DETAILS_UCMS.csv,"Index(['OldPNNumber', 'PNNumber', 'LoanType', 'LoanProductType',
+       'EffectivityDate', 'Status', 'MaturityDate', 'ActualClosedDate',
+       'LoanAmount', 'PawnedItem', 'PawnedItemType', 'AppraisalRate',
+       'RedemptionDate', 'UpdatedDate', 'CustomerNumber'],
+      dtype='object')"
+PAWNING_TRANSACTION.csv,"Index(['TransactionDate', 'OldPNNumber', 'PNNumber', 'CustomerNumber',
+       'SukiCardNumber', 'TransactionReferenceNumber', 'LoanAmount',
+       'TransactionAmount', 'RenewalAmount', 'PurposeOfTransaction',
+       'SourceTransactionCode', 'SourceSubTransactionCode', 'BranchCode',
+       'User', 'CustomerAddress1', 'CustomerAddress2', 'CustomerAddress3',
+       'CustomerFirstName', 'CustomerMiddleName', 'CustomerLastName',
+       'CustomerPhoneNumber'],
+      dtype='object')"
+PAWNING_TRANSACTION_UCMS.csv,"Index(['TransactionDate', 'OldPNNumber', 'PNNumber', 'CustomerNumber',
+       'SukiCardNumber', 'TransactionReferenceNumber', 'LoanAmount',
+       'TransactionAmount', 'RenewalAmount', 'PurposeOfTransaction',
+       'SourceTransactionCode', 'SourceSubTransactionCode', 'BranchCode',
+       'User', 'CustomerAddress1', 'CustomerAddress2', 'CustomerAddress3',
+       'CustomerFirstName', 'CustomerMiddleName', 'CustomerLastName',
+       'CustomerPhoneNumber', 'Status'],
+      dtype='object')"
+RISKWATCH.csv,"Index(['DateCreated', 'DateUpdated', 'DataId', 'Title',
+       'LastName/CorporateName', 'FirstName', 'MiddleName',
+       'IndividualCorporateType', 'WatchListType', 'Position',
+       'WatchListSource', 'Remarks', 'IsActive', 'Address1', 'Address2',
+       'Address3', 'PostalCode', 'Country', 'AliasType', 'AliasQuality',
+       'AliasLastName', 'AliasFirstName', 'AliasMiddleName',
+       'CitizenshipCountry', 'DateOfBirth', 'PlaceOfBirth',
+       'PlaceOfBirthCountry', 'IdentificationNumber', 'IssueDate',
+       'ExpiryDate', 'IssuingAuthority', 'IssuingCountry',
+       'IdentificationType', 'NationalityCountry', 'Nationality'],
+      dtype='object')"
+TO_BANK_OUTWARD_TXN_BENE.csv,"Index(['BeneficiaryCustomerReferenceNumber', 'BeneficiaryCustomerType',
+       'BeneficiaryLastName', 'BeneficiaryFirstName', 'BeneficiaryMiddleName',
+       'BeneficiaryAddress1', 'BeneficiaryAddress2', 'BeneficiaryAddress3',
+       'BeneficiaryBirthDate', 'BeneficiaryCorporateName',
+       'BeneficiaryRegistrationDate', 'BeneficiaryPlaceOfBirth',
+       'BeneficiaryTelephoneNumber', 'TransactionReferenceNumber',
+       'CustomerNO', 'AccountNumber', 'POB', 'DOB'],
+      dtype='object')"
+TO_BANK_OUTWARD_TXN_SENDER.csv,"Index(['CounterPartyCustomerReferenceNumber', 'CounterPartyCustomerType',
+       'CounterPartyLastName', 'CounterPartyFirstName',
+       'CounterPartyMiddleName', 'CounterPartyAddress1',
+       'CounterPartyAddress2', 'CounterPartyAddress3',
+       'CounterPartyCorporateName', 'TransactionReferenceNumber',
+       'CustomerNumber', 'POB', 'DOB', 'SenderIdentificationNumber',
+       'SenderIdentificationType', 'CustomerNO', 'Nationality'],
+      dtype='object')"
+TO_BANK_TXN.csv,"Index(['TransactionDate', 'CustomerNumber', 'SukiCardNumber',
+       'TransactionReferenceNumber', 'TransactionAmount', 'CalcMode',
+       'TransactionFxAmount', 'Currency', 'NameOfCorrespondentBank',
+       'CorrespondentBankAddress1', 'CorrespondentBankAddress2',
+       'CorrespondentBankAddress3', 'CorrespondentBankCountryCode',
+       'PurposeOfTransaction', 'DebitCredit', 'SourceTransactionCode',
+       'SourceSubTransactionCode', 'BranchCode', 'User', 'Status'],
+      dtype='object')"
+MC_BOUGHT_FROM_CUSTOMER.csv,"Index(['TransactionDate', 'CustomerNumber', 'SukiCardNumber',
+       'TransactionReferenceNumber', 'TransactionAmount',
+       'TransactionFxAmount', 'Currency', 'PurposeOfTransaction',
+       'DebitCredit', 'SourceTransactionCode', 'SourceSubTransactionCode',
+       'BranchCode', 'User', 'CustomerAddress1', 'CustomerAddress2',
+       'CustomerAddress3', 'CurrencyRate', 'CustomerFirstName',
+       'CustomerMiddleName', 'CustomerLastName', 'CustomerPhoneNumber',
+       'RecordState'],
+      dtype='object')"
